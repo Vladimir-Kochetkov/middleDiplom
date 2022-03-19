@@ -1,9 +1,7 @@
 const ourServices = () => {
     const serviceBlock = document.querySelectorAll('.service-block');
-    const servicesArrows = document.querySelector('.services-arrows');
     const services = document.getElementById('services');
     const servicArrows = document.querySelector('.services__arrow--right');
-    console.log(servicArrows);
 
     serviceBlock.forEach(item => {
         item.classList.add('d-none');
