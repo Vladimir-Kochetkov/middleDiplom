@@ -3,7 +3,6 @@ const servisesModal = () => {
     const servicesModal = document.querySelector('.services-modal');
     const servicesClose = document.querySelector('.services-modal__close');
     const overlay = document.querySelector('.overlay');
-    console.log(servicesModal);
 
     serviceBtn.forEach(btn => {
         btn.addEventListener('click', (event) => {
