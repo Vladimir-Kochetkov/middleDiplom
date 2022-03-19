@@ -4,7 +4,8 @@ const headerModal = () => {
     const btn = document.getElementsByClassName('btn')[1];
     const closeBtn = document.querySelector('.header-modal__close');
 
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (event) => {
+        event.preventDefault();
         overlay.style.display = 'block';
         modal.style.display = 'block';
     });
