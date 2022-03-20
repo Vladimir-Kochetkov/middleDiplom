@@ -23,7 +23,6 @@ const smoothScroll = () => {
             behavior: 'smooth'
         });
     });
-
 };
 
 export default smoothScroll;

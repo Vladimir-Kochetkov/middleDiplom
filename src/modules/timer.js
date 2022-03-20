@@ -3,6 +3,7 @@ const timer = (deadline) => {
     const hours = document.querySelectorAll('.count_2>span');
     const minutes = document.querySelectorAll('.count_3>span');
     const seconds = document.querySelectorAll('.count_4>span');
+    const countdown = document.getElementsByClassName('countdown-text');
 
     const getTimeRemaning = () => {
         const addZero = elem => elem < 10 ? `0${elem}` : elem;
@@ -11,10 +12,17 @@ const timer = (deadline) => {
         const dateNow = new Date().getTime();
         const timeRemaining = (dateStop - dateNow) / 1000;
 
+        if (dateStop <= dateNow) {
+            for (let i = 0; i < countdown.length; i++) {
+                countdown[i].childNodes[0].textContent = "Акция закончилась!Ждите новых!!!";
+            }
+        }
+
         let days = addZero(Math.floor(timeRemaining / 60 / 60 / 24));
         let hours = addZero(Math.floor(timeRemaining / 60 / 60) % 24);
         let minutes = addZero(Math.floor((timeRemaining / 60) % 60));
         let seconds = addZero(Math.floor(timeRemaining % 60));
+
         if (dateStop < dateNow) {
             days = addZero(0);
             hours = addZero(0);

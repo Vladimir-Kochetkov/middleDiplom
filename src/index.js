@@ -9,5 +9,5 @@ headerModal();
 servisesModal();
 ourServices();
 benefits();
-timer('25 march 2022');
+timer('19 march 2022');
 smoothScroll();
