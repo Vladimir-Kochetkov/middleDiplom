@@ -12,7 +12,7 @@ const timer = (deadline) => {
         const timeRemaining = (dateStop - dateNow) / 1000;
 
         let days = addZero(Math.floor(timeRemaining / 60 / 60 / 24));
-        let hours = addZero(Math.floor(timeRemaining / 60 / 60));
+        let hours = addZero(Math.floor(timeRemaining / 60 / 60) % 24);
         let minutes = addZero(Math.floor((timeRemaining / 60) % 60));
         let seconds = addZero(Math.floor(timeRemaining % 60));
         if (dateStop < dateNow) {

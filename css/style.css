@@ -1,5 +1,5 @@
 html {
-  height: 100%;
+  height: 100%;  
 }
 body {
   font-family: "NeoSansCyr-Regular", sans-serif;
@@ -1672,6 +1672,7 @@ input.error {
 .service-active{
   display: block !important;
 }
+
 
 @media (min-width: 576px) {
   .benefits-wrap {
