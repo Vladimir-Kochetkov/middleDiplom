@@ -1,17 +1,15 @@
 const imgModal = () => {
     const modal = document.getElementById('myModal');
     const textCenter = document.querySelector('.text-center');
-    const imgs = textCenter.querySelectorAll('.img-responsive'); //само изображение
+    //const imgs = textCenter.querySelectorAll('.img-responsive'); //само изображение
     let modalImg = document.getElementById("img01");
-    const img1 = textCenter.querySelectorAll('.sertificate-document');
+    const imgs = textCenter.querySelectorAll('.sertificate-document');
 
-    img1.forEach(imgW => {
-        imgs.forEach(img => {
-            imgW.addEventListener('click', (event) => {
-                event.preventDefault();
-                modal.style.display = "block";
-                modalImg.src = img.src;
-            });
+    imgs.forEach(img => {
+        textCenter.addEventListener('click', (event) => {
+            event.preventDefault();
+            modal.style.display = "block";
+            modalImg.src = img.href;
         });
     });
 
