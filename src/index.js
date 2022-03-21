@@ -5,6 +5,8 @@ import benefits from './modules/benefits';
 import timer from './modules/timer';
 import smoothScroll from './modules/smoothScroll';
 import imgModal from './modules/imgModal';
+import formSending from './modules/formSending';
+import calcForm from './modules/calcForm';
 
 headerModal();
 servisesModal();
@@ -13,3 +15,5 @@ benefits();
 timer('25 march 2022');
 smoothScroll();
 imgModal();
+formSending();
+calcForm();
