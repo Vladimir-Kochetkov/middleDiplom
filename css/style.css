@@ -213,6 +213,12 @@ input.error {
 #header .slogan {
   padding-top: 45px;
 }
+
+#header .row {
+  display: flex;
+  justify-content: space-between;
+}
+
 .phone {
   font-size: 24px;
   padding-top: 37px;
@@ -1556,8 +1562,8 @@ input.error {
 
 .header-modal__close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   font-size: 36px;
   cursor: pointer;
 }
@@ -1565,17 +1571,30 @@ input.error {
 .header-modal__close:hover {
   color: rgba(0, 0, 0, 0.35);
 }
+.fancybox-inner {
+  border-radius: 10px;
+}
 
 .services-modal__close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   font-size: 36px;
   cursor: pointer;
 }
 
 .services-modal__close:hover {
   color: rgba(0, 0, 0, 0.35);
+}
+
+#responseMessage {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-radius: 10px;
 }
 
 .overlay {
@@ -1682,9 +1701,8 @@ input.error {
 }
 
 @media (min-width: 768px) {
-  .benefits-wrap {
-    width: 100%;
-    max-width: 576px;
+  .benefits-wrap {    
+    max-width: 576%;
   }
 }
 

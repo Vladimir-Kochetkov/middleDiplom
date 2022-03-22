@@ -1,7 +1,6 @@
 const imgModal = () => {
     const modal = document.getElementById('myModal');
     const textCenter = document.querySelector('.text-center');
-    //const imgs = textCenter.querySelectorAll('.img-responsive'); //само изображение
     let modalImg = document.getElementById("img01");
     const imgs = textCenter.querySelectorAll('.sertificate-document');
 
