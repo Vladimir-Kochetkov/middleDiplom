@@ -1,21 +1,41 @@
-import headerModal from './modules/headerModal';
-import servisesModal from './modules/servisesModal';
-import timer from './modules/timer';
-import smoothScroll from './modules/smoothScroll';
-import imgModal from './modules/imgModal';
-import calcForm from './modules/calcForm';
+import { calculator } from "./modules/calculator";
 import { form } from "./modules/form";
-import { validation } from "./modules/validation";
+import headerModal from './modules/headerModal';
+import imgModal from './modules/imgModal';
+import servisesModal from './modules/servisesModal';
+
+import smoothScroll from './modules/smoothScroll';
 import { swiper } from "./modules/swiper";
+import timer from './modules/timer';
+import { validation } from "./modules/validation";
 
 
+
+calculator();
+form({
+    formId: "form1",
+    someElement: [
+        {
+            id: 'calc-total'
+
+        }
+    ]
+});
+form({
+    formId: "form2",
+    someElement: [
+        {
+            id: 'calc-total'
+
+        }
+    ]
+});
 headerModal();
-servisesModal();
-timer('25 march 2022');
-smoothScroll();
 imgModal();
-calcForm();
-form({ formId: "form1" });
-form({ formId: "form2" });
-validation();
+servisesModal();
+smoothScroll();
 swiper();
+timer('25 march 2022');
+validation();
+
+

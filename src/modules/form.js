@@ -1,6 +1,6 @@
 'use strict';
 
-export const form = ({ formId }) => {
+export const form = ({ formId, someElement = [] }) => {
     const form = document.getElementById(formId);
     const responseSendData = document.getElementById('responseMessage');
     const overlay = document.querySelector('.overlay');
@@ -61,6 +61,13 @@ export const form = ({ formId }) => {
             formBody[key] = val;
         });
 
+
+        someElement.forEach(elem => {
+            const element = document.getElementById(elem.id);
+            formBody[elem.id] = element.value;
+        });
+
+
         if (validate(formElements)) {
             sendData(formBody)
                 .then(data => {
@@ -74,7 +81,6 @@ export const form = ({ formId }) => {
 
                     formElements.forEach(input => {
                         input.value = "";
-                        input.style.border = '1px solid #dfdfdf';
                     });
 
                     close.addEventListener('click', (e) => {
@@ -88,17 +94,16 @@ export const form = ({ formId }) => {
                         responseSendData.style.display = "none";
                         overlay.style.display = "none";
                     });
-
                 })
                 .catch(error => {
                     console.log(error);
                 });
         } /* else {
-            formElements.forEach(input => {
-                input.value = '';
-                        });
-            alert('Имя или телефон введены не верно!');
-        } */
+         formElements.forEach(input => {
+            input.value = '';
+         })
+         alert('Имя или телефон введены не верно!');
+      } */
 
 
     };
