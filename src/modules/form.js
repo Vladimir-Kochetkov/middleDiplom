@@ -18,11 +18,13 @@ export const form = ({ formId }) => {
                 item.require = true;
                 if (item.value.length < 3) {
                     success = false;
+                    item.style.border = "1px solid red";
                 }
             } else if (item.name === "phone") {
                 item.require = true;
                 if ((item.value.length < 1) || item.value.length > 16) {
                     success = false;
+                    item.style.border = "1px solid red";
                 }
             } else {
                 success = true;
@@ -72,6 +74,7 @@ export const form = ({ formId }) => {
 
                     formElements.forEach(input => {
                         input.value = "";
+                        input.style.border = '1px solid #dfdfdf';
                     });
 
                     close.addEventListener('click', (e) => {
@@ -90,12 +93,12 @@ export const form = ({ formId }) => {
                 .catch(error => {
                     console.log(error);
                 });
-        } else {
+        } /* else {
             formElements.forEach(input => {
                 input.value = '';
-            });
+                        });
             alert('Имя или телефон введены не верно!');
-        }
+        } */
 
 
     };
