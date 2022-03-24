@@ -185,8 +185,7 @@
 				<div class="col-md-12 col-md-6">
 					<div class="form-group">
 						<label for="calc-total" class="text-warning">Итого</label>
-						<input name="calc-total" type="number" class="form-control" id="calc-total" placeholder="Итого"
-							disabled>
+						<input name="calc-total" class="form-control" id="calc-total" placeholder="Итого" disabled>
 					</div>
 				</div>
 			</div>
@@ -925,11 +924,13 @@
 
 
 	<div class="map-wrapper">
+		<script src="http://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+		<div id="mapexMap" style="width:100%;height:420px;"></div>
 		<script type="text/javascript">
 			ymaps.ready(function () {
 				var mapexMap = new ymaps.Map('mapexMap', {
 					center: [53.89063752803102, 27.52623526574704], // центр карты
-					zoom: 14, // масштаб
+					zoom: 14, // масштаб 
 					controls: ['zoomControl']
 				}),
 
