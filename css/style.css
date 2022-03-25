@@ -1460,6 +1460,10 @@ span.sert-close{
   #header {
     text-align: center;
   }
+  #header .row {
+    flex-direction: column;
+  }
+
   #header .block {
     width: 100% !important;
   }
