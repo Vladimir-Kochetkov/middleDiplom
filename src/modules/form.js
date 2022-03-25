@@ -4,10 +4,11 @@ export const form = ({ formId, someElement = [] }) => {
     const form = document.getElementById(formId);
     const responseSendData = document.getElementById('responseMessage');
     const overlay = document.querySelector('.overlay');
+    const headerModal = document.querySelector('.header-modal');
+    const servicesModal = document.querySelector('.services-modal');
 
     const text = document.querySelector('#responseMessage .box-modal_title>h2');
     const close = document.querySelector('#responseMessage .box-modal_body>a.fancyClose');
-
 
     const validate = (list) => {
         let success = true;
@@ -74,6 +75,8 @@ export const form = ({ formId, someElement = [] }) => {
                     responseSendData.style.display = "block";
                     if (data) {
                         text.textContent = "Форма успешно отправлена";
+                        headerModal.style.display = "none";
+                        servicesModal.style.display = "none";
                     } else {
                         text.textContent = "Произошла ошибка, данные формы не отправлены";
                     }

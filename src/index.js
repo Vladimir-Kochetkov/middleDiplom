@@ -23,6 +23,14 @@ if (body.classList.contains("okna")) {
         someElement: []
 
     });
+    form({
+        formId: "callback-form1",
+        someElement: []
+    });
+    form({
+        formId: "application-form1",
+        someElement: []
+    });
 }
 if (body.classList.contains("balkony")) {
     form({
@@ -43,6 +51,24 @@ if (body.classList.contains("balkony")) {
             }
         ]
     });
+    form({
+        formId: "callback-form2",
+        someElement: [
+            {
+                id: 'calc-total'
+
+            }
+        ]
+    });
+    form({
+        formId: "application-form2",
+        someElement: [
+            {
+                id: 'calc-total'
+
+            }
+        ]
+    });
 }
 if (body.classList.contains("kuhni")) {
     form({
@@ -54,6 +80,14 @@ if (body.classList.contains("kuhni")) {
         formId: "form6",
         someElement: []
 
+    });
+    form({
+        formId: "callback-form3",
+        someElement: []
+    });
+    form({
+        formId: "application-form3",
+        someElement: []
     });
 }
 headerModal();
