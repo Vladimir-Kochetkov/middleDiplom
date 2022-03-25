@@ -31,7 +31,7 @@ export const calculator = () => {
 
 
         calcBlock.addEventListener('input', () => {
-            if (type.value === '--' || typeMaterial.value === '--' || area.value === '0') {
+            if (type.value === '--' || typeMaterial.value === '--' || area.value === '') {
                 calcTotal.value = '';
             } else if (type.value !== '--' && typeMaterial.value !== '--' && area.value !== '') {
                 calculate();
