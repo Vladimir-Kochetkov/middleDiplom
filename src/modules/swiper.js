@@ -24,10 +24,6 @@ export const swiper = () => {
                 slidesPerView: 3,
                 slidesPerGroup: 3,
             }
-        },
-        grid: {
-            rows: 1,
-            column: 2
         }
     });
 
