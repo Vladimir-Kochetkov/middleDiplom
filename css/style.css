@@ -1735,8 +1735,8 @@ input.error {
 }
 
 .benefits__item {
-  width: 100%;
-  max-width: 185px;
+  align-items: center;
+  justify-content: center;
 }
 
 .benefits-arrows {
