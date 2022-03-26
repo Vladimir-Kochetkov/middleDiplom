@@ -1,6 +1,7 @@
 'use strict';
 
 export const form = ({ formId, someElement = [] }) => {
+    const body = document.querySelector('body');
     const form = document.getElementById(formId);
     const responseSendData = document.getElementById('responseMessage');
     const overlay = document.querySelector('.overlay');
@@ -57,17 +58,21 @@ export const form = ({ formId, someElement = [] }) => {
         const formElements = form.querySelectorAll('input[type=text]');
         const formData = new FormData(form);
         const formBody = {};
+        let calcTotal = document.getElementById('calc-total');
+
 
         formData.forEach((val, key) => {
             formBody[key] = val;
         });
 
-
-        someElement.forEach(elem => {
-            const element = document.getElementById(elem.id);
-            formBody[elem.id] = element.value;
-        });
-
+        if (body.classList.contains("balkony")) {
+            if (calcTotal.value !== '') {
+                someElement.forEach(elem => {
+                    const element = document.getElementById(elem.id);
+                    formBody[elem.id] = element.value;
+                });
+            }
+        }
 
         if (validate(formElements)) {
             sendData(formBody)
@@ -121,3 +126,5 @@ export const form = ({ formId, someElement = [] }) => {
 
 
 };
+
+
