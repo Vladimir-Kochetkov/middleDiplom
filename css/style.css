@@ -1202,10 +1202,16 @@ span.sert-close{
   #offer .container {
     height: 550px;
   }
+  #header .button {
+    padding: 10px 0px 20px;
+  }
 }
 @media (max-width: 1450px) {
   #offer .container {
     height: 500px;
+  }
+  #header .button {
+    padding: 10px 0px 20px;
   }
 }
 @media (max-width: 1350px) {
@@ -1223,6 +1229,9 @@ span.sert-close{
   .btn-group-lg > .btn {
     height: 40px;
     font-size: 16px;
+  }
+  #header .button {
+    padding: 10px 0px 20px;
   }
 }
 @media (max-width: 1150px) {
@@ -1249,6 +1258,10 @@ span.sert-close{
   }
 }
 @media (max-width: 1200px) {
+  .navbar-collapse.collapse {
+    display: none ;
+    border-top: 1px solid transparent;
+  }
   #header .phone {
     padding-top: 11px;
   }
@@ -1367,7 +1380,7 @@ span.sert-close{
     border-width: 0 0 1px;
   }
   .navbar-collapse.collapse {
-    display: none !important;
+    display: none ;
     border-top: 1px solid transparent;
   }
   .navbar-nav {

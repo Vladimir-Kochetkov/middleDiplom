@@ -24,7 +24,7 @@ export const form = ({ formId, someElement = [] }) => {
                 }
             } else if (item.name === "phone") {
                 item.require = true;
-                if ((item.value.length < 1) || item.value.length > 16) {
+                if (item.value.length < 10) {
                     success = false;
                     item.classList.add('error');
                 }

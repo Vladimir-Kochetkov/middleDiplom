@@ -5,6 +5,7 @@ import imgModal from './modules/imgModal';
 import servisesModal from './modules/servisesModal';
 
 import smoothScroll from './modules/smoothScroll';
+import menu from './modules/menu';
 import { swiper } from "./modules/swiper";
 import timer from './modules/timer';
 import { validation } from "./modules/validation";
@@ -95,7 +96,7 @@ imgModal();
 servisesModal();
 smoothScroll();
 swiper();
-timer('25 march 2022');
+timer('27 march 2022');
 validation();
-
+menu();
 
